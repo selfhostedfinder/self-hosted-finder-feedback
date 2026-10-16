@@ -1,0 +1,27 @@
+name: Correct a fact
+description: A field on a record is wrong or out of date.
+title: "[correction] <record>: <field>"
+labels: ["correction"]
+body:
+  - type: input
+    id: record
+    attributes: {label: Record, description: "Name or page URL of the record"}
+    validations: {required: true}
+  - type: input
+    id: field
+    attributes: {label: Field, description: "e.g. license, runs alongside, outbound connections, what the free edition lacks"}
+    validations: {required: true}
+  - type: textarea
+    id: what
+    attributes: {label: What is wrong, description: "What the page says and what you believe is correct"}
+    validations: {required: true}
+  - type: input
+    id: source
+    attributes: {label: Primary source, description: "Link to the project's own docs, repo, license or pricing page"}
+    validations: {required: true}
+  - type: checkboxes
+    id: affiliation
+    attributes:
+      label: Disclosure
+      options:
+        - label: I work on or for this project (fine, just tell us)

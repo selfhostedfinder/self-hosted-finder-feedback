@@ -1,0 +1,22 @@
+name: Suggest an alternative
+description: A self-hostable project that should be in the catalog.
+title: "[suggestion] <project>"
+labels: ["suggestion"]
+body:
+  - type: input
+    id: project
+    attributes: {label: Project and repository URL}
+    validations: {required: true}
+  - type: input
+    id: replaces
+    attributes: {label: What cloud product or job does it replace?}
+    validations: {required: true}
+  - type: textarea
+    id: why
+    attributes: {label: Why it belongs, description: "Self-hostable, maintained, documented install. New records are reviewed before they publish."}
+  - type: checkboxes
+    id: affiliation
+    attributes:
+      label: Disclosure
+      options:
+        - label: I work on or for this project

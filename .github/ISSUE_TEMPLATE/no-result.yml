@@ -1,0 +1,12 @@
+name: Search found nothing
+description: You searched for something and got no useful result.
+title: "[no result] <your search>"
+labels: ["no-result"]
+body:
+  - type: input
+    id: query
+    attributes: {label: What you searched for}
+    validations: {required: true}
+  - type: textarea
+    id: expected
+    attributes: {label: What you hoped to find}
